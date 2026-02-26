@@ -23,3 +23,12 @@ h1{
     outline: none;
     display: block;
 }
+#addTaskButton, #deleteTaskButton{
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
