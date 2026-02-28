@@ -5,20 +5,29 @@ const taskList = document.querySelector("#taskList");
 const check = document.querySelector("#check");
 
 addBtn.addEventListener("click", function() {
-    
     const taskText = input.value.trim();
+
     if (taskText) {
         const li = document.createElement("li");
+        li.classList.add("taskItem");
+
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.classList.add("checkbox");
-        checkbox.id = "check";
-        const newLabel = document.createElement('label');
-        newLabel.htmlFor = check;
-         newLabel.appendChild(document.createTextNode( input.value));
+
+        const span = document.createElement("span");
+        span.classList.add("taskText");
+        span.textContent = taskText;
+
+        // When checkbox is checked → add line-through
+        checkbox.addEventListener("change", function() {
+            span.classList.toggle("completed");
+        });
+
         li.appendChild(checkbox);
-        li.textContent = taskText;
+        li.appendChild(span);
         taskList.appendChild(li);
+
         input.value = "";
     }
 });
