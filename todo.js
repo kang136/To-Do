@@ -2,7 +2,6 @@ const input = document.querySelector("#taskInput");
 const addBtn = document.querySelector("#addTaskButton");
 const deletebtn = document.querySelector("#deleteTaskButton");
 const taskList = document.querySelector("#taskList");
-const check = document.querySelector("#check");
 
 addBtn.addEventListener("click", function() {
     const taskText = input.value.trim();
@@ -19,9 +18,9 @@ addBtn.addEventListener("click", function() {
         span.classList.add("taskText");
         span.textContent = taskText;
 
-        // When checkbox is checked → add line-through
-        checkbox.addEventListener("change", function() {
-            span.classList.toggle("completed");
+        // When checkbox is checked it adds a line-through and removes it when unchecked
+        checkbox.addEventListener("input", function() {
+            span.classList.toggle("completed", checkbox.checked);
         });
 
         li.appendChild(checkbox);
