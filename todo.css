@@ -17,13 +17,13 @@ h1{
 #taskInput{
     width: 60%;
     padding: 10px;
-    margin-bottom: 14px;
+    margin-bottom: 0px;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
-    display: block;
+    display: inline;
 }
-#addTaskButton, #deleteTaskButton{
+#addTaskButton{
     padding: 10px 20px;
     margin-left: 10px;
     border: none;
@@ -40,7 +40,7 @@ h1{
     cursor: pointer;
     position: relative;
     bottom: 2px;
-    left: 250px;
+    left: 280px;
 }
 .taskText {
     flex: 1;
@@ -49,4 +49,22 @@ h1{
     text-decoration: line-through;
     color: gray;
     opacity: 0.7;
+}
+.deleteImage{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    bottom: 2px;
+    left: 290px;
+}
+.option{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 6px;
+}
+.error {
+    color: red;
+    font-size: 10px;
 }
